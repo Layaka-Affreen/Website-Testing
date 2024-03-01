@@ -1,0 +1,105 @@
+{
+  "id": "ae039205-787c-40da-882c-6b7ae35bcdad",
+  "version": "2.0",
+  "name": "Websitepdfdownload",
+  "url": "https://www.rbi.org.in",
+  "tests": [{
+    "id": "b839521d-d26c-4565-9808-867a0b60a1ad",
+    "name": "Downloadpdf",
+    "commands": [{
+      "id": "d71f39ff-714c-40ab-b780-d0471ac07b0a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "483264a8-6857-4deb-896d-16f4f137b881",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5e88800-9851-4742-8931-bb84d1b85379",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Occasional",
+      "targets": [
+        ["linkText=Occasional", "linkText"],
+        ["css=li:nth-child(6) li:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Occasional')]", "xpath:link"],
+        ["xpath=//form[@id='Form1']/nav/div/div/ul/li[6]/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '../Scripts/Publications.aspx?publication=Occasional')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Occasional')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4854735-74ec-4c9c-b438-187fe04dc298",
+      "comment": "",
+      "command": "click",
+      "target": "css=#occasional li:nth-child(3) > a",
+      "targets": [
+        ["css=#occasional li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Banking\n                                Statistics 1972 - 2002 (PDF files)')]", "xpath:link"],
+        ["xpath=//div[@id='occasional']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'OccasionalPublications.aspx?head=Banking Statistics 1972 - 2002')]", "xpath:href"],
+        ["xpath=//div[7]/ul/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d152004-89dd-4501-a268-e35bae793894",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) img",
+      "targets": [
+        ["css=tr:nth-child(3) img", "css:finder"],
+        ["xpath=//div[@id='annual']/table[2]/tbody/tr[3]/td[3]/a/img", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]/a/img", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win8148",
+      "windowTimeout": 2000
+    }, {
+      "id": "b318ade6-2351-43a7-8ecf-f78364a08eba",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b0d9934-eee5-4456-a0ee-57d72b5de29f",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8148}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f09ec19-9efa-4f14-9c49-b820ef704ee5",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb40b2c3-90a7-440d-8940-b278e66a6218",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win8148}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d6dc33e1-1928-41c1-be75-969d084b1621",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b839521d-d26c-4565-9808-867a0b60a1ad"]
+  }],
+  "urls": ["https://www.rbi.org.in/"],
+  "plugins": []
+}
